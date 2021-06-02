@@ -1,15 +1,17 @@
 package strategy.solucao;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
 
-        CieloPay cieloPay = new CieloPay();
-        StonePay stonePay = new StonePay();
-        StonePay redePay = new StonePay();
+        Pay cieloPay = new CieloPay();
+        Pay stonePay = new StonePay();
+        Pay redePay = new StonePay();
 
-        redePay.pay();
-        cieloPay.pay();
-        stonePay.pay();
+        List<Pay> pays = Arrays.asList(cieloPay, stonePay, redePay);
 
+        pays.forEach(Pay::pay);
     }
 }
